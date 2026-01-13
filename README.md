@@ -329,7 +329,7 @@ research_agent/                # Main package
 └── monitoring/            # Logging & metrics
     └── metrics.py         # Structured logging
 
-streamlit-ui/              # Web interface
+research_agent/ui/          # Research Agent Web Interface
 ├── app.py                 # Main Streamlit application
 ├── run.py                 # Launch script
 ├── requirements.txt       # Dependencies
@@ -558,7 +558,7 @@ research_agent/          # Backend Python package
 │   └── trigger.py
 └── monitoring/           # Metrics & logging
 
-streamlit-ui/              # Web interface
+research_agent/ui/          # Research Agent Web Interface
 ├── app.py
 ├── run.py
 ├── requirements.txt
