@@ -1,0 +1,55 @@
+# Autonomous Research Agent - Requirements
+# Production-ready 24/7 AI research assistant
+# https://github.com/your-repo/unbiased-observer
+
+# Core Python
+python>=3.10.0
+
+# Database
+psycopg[binary]>=3.1.0
+pgvector>=0.2.0
+
+# Async HTTP and Web
+aiohttp>=3.9.0
+httpx>=0.25.0
+beautifulsoup4>=4.12.0
+
+# LLM and AI
+openai>=1.0.0
+instructor>=1.0.0
+google-generativeai>=0.3.0
+
+# Task Scheduling
+APScheduler>=3.10.0
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+scikit-learn>=1.3.0
+
+# Graph Analysis
+networkx>=3.1
+graspologic>=3.4.0
+
+# Text Processing
+pydantic>=2.0.0
+
+# Configuration and Environment
+pyyaml>=6.0.0
+python-dotenv>=1.0.0
+
+# Research APIs
+arxiv>=2.1.0
+
+# Development and Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Optional: Monitoring and Metrics
+# prometheus-client>=0.17.0
+
+# Optional: Code Quality
+# ruff>=0.1.0
+# mypy>=1.5.0
+# black>=23.0.0

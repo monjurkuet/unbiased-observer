@@ -1,0 +1,18 @@
+# configs/research_sources.yaml
+sources:
+  - type: "manual"
+    name: "Manual Input"
+    description: "Manually added research sources"
+    active: true
+  - type: "arxiv"
+    name: "arXiv AI Research"
+    description: "Automated arXiv monitoring for AI research papers"
+    keywords: ["artificial intelligence", "machine learning", "deep learning"]
+    max_results: 5
+    active: true
+  - type: "arxiv"
+    name: "arXiv NLP Research"
+    description: "Automated arXiv monitoring for NLP research papers"
+    keywords: ["natural language processing", "transformers", "LLM"]
+    max_results: 5
+    active: true

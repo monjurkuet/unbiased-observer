@@ -1,0 +1,31 @@
+[Unit]
+Description=Autonomous Research Agent - 24/7 AI Research Assistant
+After=network.target postgresql.service
+Requires=postgresql.service
+
+[Service]
+Type=simple
+User=research-agent
+Group=research-agent
+WorkingDirectory=/home/administrator/dev/unbiased-observer
+Environment=PYTHONPATH=/home/administrator/dev/unbiased-observer
+Environment=GOOGLE_API_KEY=your_google_genai_key_here
+ExecStart=/usr/bin/python3 research_agent/main.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=research-agent
+
+# Security settings
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=/home/administrator/dev/unbiased-observer/logs /home/administrator/dev/unbiased-observer/cache
+
+# Resource limits
+MemoryLimit=4G
+CPUQuota=200%
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,72 @@
+# configs/research_agent_config.yaml
+agent:
+  name: "autonomous_research_agent"
+  version: "1.0"
+  log_level: "INFO"
+
+database:
+  connection_string: "postgresql://agentzero@localhost:5432/knowledge_graph"
+  pool_min_size: 5
+  pool_max_size: 20
+
+llm:
+  base_url: "http://localhost:8317/v1"
+  api_key: "lm-studio"
+  model_default: "gemini-2.5-flash"
+  model_pro: "gemini-2.5-pro"
+  max_retries: 3
+  timeout: 120
+
+embedding:
+  provider: "google"
+  model: "models/text-embedding-004"
+  api_key_env: "GOOGLE_API_KEY"
+  dimensions: 768
+
+research:
+  sources_config: "configs/research_sources.yaml"
+  max_concurrent_fetches: 10
+  rate_limit: 2.0
+  max_content_length: 1000000
+
+ingestion:
+  max_concurrent_llm_calls: 3
+  batch_size: 10
+  retry_backoff_factor: 2.0
+  max_retries: 3
+
+processing:
+  min_entities_to_process: 100
+  min_time_between_processing_hours: 1
+  processing_interval_seconds: 60
+
+monitoring:
+  metrics_port: 8000
+  health_check_interval_seconds: 300
+  log_retention_days: 30
+
+paths:
+  knowledge_base: "\\\\wsl.localhost\\Ubuntu\\home\\administrator\\dev\\unbiased-observer\\knowledge_base"
+  cache_dir: "./cache"
+  logs_dir: "./logs"
+  state_dir: "./state"
+
+arxiv:
+  monitoring_enabled: true
+  monitoring_interval_hours: 2
+  search_configs:
+    - name: "AI Research"
+      keywords: ["artificial intelligence", "machine learning", "deep learning"]
+      max_results: 5
+      days_back: 7
+      active: true
+    - name: "NLP Research"
+      keywords: ["natural language processing", "transformers", "LLM"]
+      max_results: 5
+      days_back: 7
+      active: true
+    - name: "Computer Vision"
+      keywords: ["computer vision", "image recognition", "neural networks"]
+      max_results: 3
+      days_back: 7
+      active: true
