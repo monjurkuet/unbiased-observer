@@ -1,5 +1,7 @@
 # High-Fidelity Agentic GraphRAG Architecture
 
+*This document describes the original design vision for the Knowledge Base GraphRAG system. For current implementation details, see [CODEBASE_ARCHITECTURE.md](CODEBASE_ARCHITECTURE.md).*
+
 ## Core Philosophy
 **"Zero Compromise on Quality."**
 We prioritize extraction accuracy, resolution fidelity, and depth of reasoning over ingestion speed. We adopt Microsoft's GraphRAG hierarchical summarization approach but implement it directly on our PostgreSQL + Gemini stack.
